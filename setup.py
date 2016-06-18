@@ -13,7 +13,7 @@ extension_dir="build"
 if not exists(package_name):
     makedirs(package_name)
 
-extension_script_name=package_name+'.py'
+extension_script_name=join(extension_dir,package_name+'.py')
 extension_name="_"+package_name+".so"
 
 copyfile(extension_script_name,join(package_name,"__init__.py"))
